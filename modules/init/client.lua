@@ -18,6 +18,8 @@ if not framework then return error('Unable to find framework, This could be beca
 local qb_trgt = GetResourceState('qb-target')
 local ox_trgt = GetResourceState('ox_target')
 local trgt = qb_trgt == 'started' and 'qb-target' or ox_trgt == 'started' and 'ox_target' or nil 
+stevo_lib.target = trgt
+
 
 if not trgt then return error('Unable to find target, This could be because you are using a modified target name.') end
 
